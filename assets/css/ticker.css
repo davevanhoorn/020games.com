@@ -1,0 +1,38 @@
+.ticker {
+  display: flex;
+  overflow: hidden;
+}
+
+.ticker__list {
+  display: flex;
+  animation: ticker 100s infinite linear;
+}
+
+@media all and (min-width: 768px) {
+  .ticker__list {
+    animation: ticker 150s infinite linear;
+  }
+}
+
+.ticker__list .ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  display: flex;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media all and (min-width: 768px) {
+  .ticker__item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}

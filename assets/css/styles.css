@@ -1,0 +1,207 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-bottom: 128px;
+  background-color: #1e094a;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.color-1 {
+  color: #00afb5;
+}
+
+.background-color-1 {
+  background-color: #00afb5;
+}
+
+.border-color-1 {
+  border-color: #00afb5;
+}
+
+.color-2 {
+  color: #b257f2;
+}
+
+.background-color-2 {
+  background-color: #b257f2;
+}
+
+.border-color-2 {
+  border-color: #b257f2;
+}
+
+.color-3 {
+  color: #8b81f5;
+}
+
+.background-color-3 {
+  background-color: #8b81f5;
+}
+
+.border-color-3 {
+  border-color: #8b81f5;
+}
+
+/*
+** Header
+*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(30, 9, 74, 0.96);
+}
+
+#headerClearer {
+  height: 65px;
+}
+
+@media all and (min-width: 768px) {
+  #headerClearer {
+    height: 116px;
+  }
+}
+
+nav a {
+  padding-bottom: 0.75rem;
+  margin-left: 4rem;
+  border-bottom: solid 10px transparent;
+}
+
+nav a:hover {
+  border-bottom: solid 10px #38d1d6;
+}
+
+.show-border {
+  border-bottom: solid 10px #38d1d6;
+}
+
+/*
+** Footer
+*/
+footer {
+  background-color: rgba(30, 9, 74, 0.96);
+}
+
+#socials svg:hover path {
+  fill: #5cd7db;
+}
+
+/*
+** Services
+*/
+
+#services::before {
+  content: "";
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+}
+
+#services-content {
+  background-image: url("../images/020games-com_rocket.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#services__partner-network {
+  background: rgb(178, 87, 242);
+  background: linear-gradient(
+    350deg,
+    rgba(178, 87, 242, 0.8) 0%,
+    rgba(166, 91, 233, 0.8) 10%,
+    rgba(54, 180, 185, 0.8) 37%,
+    rgba(172, 89, 237, 0.8) 69%,
+    rgba(178, 87, 242, 0.8) 100%
+  );
+  border-radius: 0px 0px 20px 20px;
+}
+
+#services__operational {
+  background: rgb(178, 87, 242);
+  background: linear-gradient(
+    350deg,
+    rgba(178, 87, 242, 0.8) 0%,
+    rgba(166, 91, 233, 0.8) 25%,
+    rgba(54, 180, 185, 0.9) 50%,
+    rgba(172, 89, 237, 0.8) 80%,
+    rgba(178, 87, 242, 0.8) 100%
+  );
+  border-radius: 0px 0px 20px 20px;
+}
+
+#services__platform-agnostic {
+  background: rgb(178, 87, 242);
+  background: linear-gradient(
+    350deg,
+    rgba(178, 87, 242, 0.8) 0%,
+    rgba(166, 91, 233, 0.8) 40%,
+    rgba(54, 180, 185, 0.8) 67%,
+    rgba(172, 89, 237, 0.8) 89%,
+    rgba(178, 87, 242, 0.8) 100%
+  );
+  border-radius: 0px 0px 20px 20px;
+}
+
+.service h3 {
+  background-color: rgba(178, 89, 242, 0.85);
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*
+** About
+*/
+#about::before {
+  content: "";
+  display: block;
+  height: 30px;
+  margin-top: -30px;
+}
+
+/*
+** Contact
+*/
+#contact::before {
+  content: "";
+  display: block;
+  height: 30px;
+  margin-top: -30px;
+}
+
+form label.error {
+  color: #d01414;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  font-size: x-small;
+}
+
+@media all and (min-width: 768px) {
+  form label.error {
+    top: 0.5rem;
+    left: 1rem;
+  }
+}
+
+form input.error ~ img.error-icon,
+form textarea.error ~ img.error-icon {
+  display: block;
+}
+
+form input.valid ~ img.valid-icon,
+form textarea.valid ~ img.valid-icon {
+  display: block;
+}
+
+/*
+** CTA
+*/
+.cta:hover {
+  background-color: #5cd7db;
+}
