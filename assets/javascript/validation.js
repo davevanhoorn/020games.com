@@ -19,4 +19,11 @@ $(function () {
       form.submit()
     },
   })
+
+  $("form").on("submit", function (e) {
+    if (grecaptcha.getResponse() == "") {
+      e.preventDefault()
+      alert("Please validate you're not a robot")
+    }
+  })
 })
