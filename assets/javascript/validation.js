@@ -16,14 +16,11 @@ $(function () {
       message: "Please enter your message",
     },
     submitHandler: function (form) {
-      form.submit()
+      if (grecaptcha.getResponse() == "") {
+        alert("Please validate you're not a robot")
+      } else {
+        form.submit()
+      }
     },
-  })
-
-  $("form").on("submit", function (e) {
-    if (grecaptcha.getResponse() == "") {
-      e.preventDefault()
-      alert("Please validate you're not a robot")
-    }
   })
 })
