@@ -73,8 +73,57 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "5998530666823572");
+    fbq("track", "PageView");
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=276802485"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "276802485");
+  </script>
 
   <body class="font-poppins mobile-menu-closed">
+    <noscript>
+      <img
+        alt="pixel"
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=5998530666823572&ev=PageView&noscript=1"
+      />
+    </noscript>
     <div id="headerClearer"></div>
     <header class="z-30 pt-4 pb-4 md:pt-12 md:pb-6">
       <div class="container mx-auto px-4 flex items-start justify-between">
@@ -96,8 +145,7 @@
             top-0
             md:flex-row
             left-full
-            md:left-0
-            md:relative
+            md:left-0 md:relative
             flex
             leading-none
             text-white
@@ -146,8 +194,7 @@
           class="
             text-3xl
             leading-relaxed
-            md:text-5xl
-            md:leading-relaxed
+            md:text-5xl md:leading-relaxed
             text-white
             font-semibold
           "
@@ -221,8 +268,7 @@
       id="partnered-with"
       class="
         mt-8
-        md:pl-24
-        md:mt-10
+        md:pl-24 md:mt-10
         flex flex-col
         md:flex-row
         items-center
@@ -240,7 +286,8 @@
           self-start
           md:text-xl
           md:leading-relaxed
-          md:border-color-2 md:border-r-2
+          md:border-color-2
+          md:border-r-2
           md:py-6
           md:pr-12
         "
@@ -640,8 +687,7 @@
               font-semibold
               text-center
               mb-1
-              md:px-5
-              md:py-10
+              md:px-5 md:py-10
             "
           >
             Partner network
@@ -691,8 +737,7 @@
             md:w-4/12
             service
             mb-10
-            md:mb-0
-            md:px-2
+            md:mb-0 md:px-2
             flex flex-col
             justify-between
           "
@@ -706,8 +751,7 @@
               font-semibold
               text-center
               mb-1
-              md:px-5
-              md:py-10
+              md:px-5 md:py-10
             "
           >
             Operational
@@ -761,8 +805,7 @@
               font-semibold
               text-center
               mb-1
-              md:px-5
-              md:py-10
+              md:px-5 md:py-10
             "
           >
             Platform agnostic
@@ -839,9 +882,7 @@
             class="
               text-3xl
               leading-relaxed
-              md:mb-6
-              md:text-5xl
-              md:leading-relaxed
+              md:mb-6 md:text-5xl md:leading-relaxed
               text-white
               font-semibold
             "
@@ -856,10 +897,7 @@
               leading-8
               font-regular
               mt-8
-              md:mt-0
-              md:text-2xl
-              md:leading-10
-              md:font-semibold
+              md:mt-0 md:text-2xl md:leading-10 md:font-semibold
               mb-8
             "
           >
@@ -875,9 +913,7 @@
               leading-8
               font-regular
               text-white
-              md:text-2xl
-              md:leading-10
-              md:font-light
+              md:text-2xl md:leading-10 md:font-light
               mb-8
             "
           >
@@ -894,9 +930,7 @@
               leading-8
               font-regular
               text-white
-              md:text-2xl
-              md:leading-10
-              md:font-light
+              md:text-2xl md:leading-10 md:font-light
               mb-8
             "
           >
@@ -909,9 +943,7 @@
               leading-8
               font-regular
               text-white
-              md:text-2xl
-              md:leading-10
-              md:font-semibold
+              md:text-2xl md:leading-10 md:font-semibold
               mb-8
             "
           >
@@ -970,9 +1002,7 @@
             class="
               text-3xl
               leading-relaxed
-              md:mb-8
-              md:text-5xl
-              md:leading-relaxed
+              md:mb-8 md:text-5xl md:leading-relaxed
               text-white
               font-semibold
             "
@@ -1024,10 +1054,7 @@
                   font-bold
                   px-2
                   py-2
-                  md:py-3
-                  md:px-3
-                  md:mb-6
-                  md:pr-16
+                  md:py-3 md:px-3 md:mb-6 md:pr-16
                   pr-8
                   leading-none
                 "
@@ -1043,11 +1070,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-invalid.svg"
                 alt="Form invalid icon"
@@ -1060,11 +1085,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-valid.svg"
                 alt="Form valid icon"
@@ -1096,10 +1119,7 @@
                   font-bold
                   px-2
                   py-2
-                  md:py-3
-                  md:px-3
-                  md:mb-6
-                  md:pr-16
+                  md:py-3 md:px-3 md:mb-6 md:pr-16
                   pr-8
                   leading-none
                 "
@@ -1115,11 +1135,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-invalid.svg"
                 alt="Form invalid icon"
@@ -1132,11 +1150,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-valid.svg"
                 alt="Form valid icon"
@@ -1168,10 +1184,7 @@
                   font-bold
                   px-2
                   py-2
-                  md:py-3
-                  md:px-3
-                  md:mb-6
-                  md:pr-16
+                  md:py-3 md:px-3 md:mb-6 md:pr-16
                   pr-8
                   leading-none
                 "
@@ -1187,11 +1200,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-invalid.svg"
                 alt="Form invalid icon"
@@ -1204,11 +1215,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-valid.svg"
                 alt="Form valid icon"
@@ -1242,10 +1251,7 @@
                   font-bold
                   px-2
                   py-2
-                  md:py-3
-                  md:px-3
-                  md:mb-6
-                  md:pr-16
+                  md:py-3 md:px-3 md:mb-6 md:pr-16
                   pr-8
                   leading-none
                 "
@@ -1259,11 +1265,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-invalid.svg"
                 alt="Form invalid icon"
@@ -1276,11 +1280,9 @@
                   h-5
                   right-2
                   top-3
-                  md:w-7
-                  md:h-7
+                  md:w-7 md:h-7
                   absolute
-                  md:right-2
-                  md:top-4
+                  md:right-2 md:top-4
                 "
                 src="assets/images/icon-form-validation-valid.svg"
                 alt="Form valid icon"
